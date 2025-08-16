@@ -1,0 +1,26 @@
+<app-navbar-private></app-navbar-private>
+
+<div class="page-wrapper">
+  <mat-card class="profile-card">
+    <ng-container *ngIf="loading">
+      <div class="center-note">Loading profile...</div>
+    </ng-container>
+
+    <ng-container *ngIf="!loading && error">
+      <div class="error">{{ error }}</div>
+    </ng-container>
+
+    <ng-container *ngIf="!loading && client">
+      <div class="profile-top">
+        <mat-icon class="profile-icon" aria-hidden="false" aria-label="Profile">account_circle</mat-icon>
+        <div class="profile-name">{{ client.username || client.name || 'Unknown' }}</div>
+        <div class="profile-email">{{ client.email }}</div>
+      </div>
+
+      <div class="actions">
+        <!--<button mat-stroked-button (click)="logout()">Logout</button>-->
+        <button mat-flat-button color="primary" routerLink="/orders">My Orders</button>
+      </div>
+    </ng-container>
+  </mat-card>
+</div>

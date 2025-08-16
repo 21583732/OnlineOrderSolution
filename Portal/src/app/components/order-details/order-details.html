@@ -1,0 +1,38 @@
+<app-navbar-private></app-navbar-private>
+<div class="page-wrapper">
+  <div class="card">
+    <h2>Order Details</h2>
+
+    <div *ngIf="loading" class="center-note">Loading...</div>
+    <div *ngIf="error" style="color:#ffd4d4;">{{ error }}</div>
+
+    <div *ngIf="!loading && order">
+      <p><strong>Order ID:</strong> {{ order.orderId }}</p>
+      <p><strong>Order Date:</strong> {{ order.orderDate | date:'full' }}</p>
+      <p><strong>Status:</strong> {{ order.status }}</p>
+
+      <h3>Items</h3>
+      <table class="table-modern">
+        <thead>
+          <tr>
+            <th>Product</th>
+            <th style="width:100px">Qty</th>
+            <th style="width:140px; text-align:right">Unit Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let it of order.orderItems">
+            <td>{{ it.product?.name }}</td>
+            <td>{{ it.quantity }}</td>
+            <td style="text-align:right">{{ it.unitPrice | currency }}</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <div style="margin-top: 16px; display:flex; gap:8px;">
+        <button mat-button (click)="onBack()">Back</button>
+        <button mat-raised-button color="warn" (click)="onCancelOrder()">Cancel Order</button>
+      </div>
+    </div>
+  </div>
+</div>

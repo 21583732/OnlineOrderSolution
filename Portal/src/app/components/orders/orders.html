@@ -1,0 +1,40 @@
+<app-navbar-private></app-navbar-private>
+<div class="page-wrapper">
+  <div class="card">
+    <h2>Your Orders</h2>
+
+    <div *ngIf="loading" class="center-note">Loading orders...</div>
+    <div *ngIf="error" style="color:#ffd4d4;">{{ error }}</div>
+
+    <table *ngIf="!loading && orders.length > 0" class="table-modern">
+      <thead>
+        <tr>
+          <th style="width:90px">Order ID</th>
+          <th style="width:160px">Order Date</th>
+          <th style="width:140px">Status</th>
+          <th>Items</th>
+          <th style="width:110px">Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let order of orders">
+          <td>{{ order.orderId }}</td>
+          <td>{{ order.orderDate | date:'short' }}</td>
+          <td>{{ order.status }}</td>
+          <td>
+            <ul class="muted" style="margin:0; padding-left: 18px;">
+              <li *ngFor="let it of order.orderItems">
+                {{ it.product?.name }} x{{ it.quantity }} @ {{ it.unitPrice | currency }}
+              </li>
+            </ul>
+          </td>
+          <td>
+            <button mat-stroked-button color="primary" (click)="viewOrder(order.orderId)">View</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="!loading && orders.length === 0" class="center-note">You have no orders.</div>
+  </div>
+</div>

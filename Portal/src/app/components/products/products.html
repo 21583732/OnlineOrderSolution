@@ -1,0 +1,45 @@
+<!-- <div *ngIf="loading">Loading products...</div>
+    <div *ngIf="!loading && products.length === 0">No products found.</div>
+    <ul *ngIf="!loading && products.length > 0">
+      <li *ngFor="let product of products">
+        {{ product.productId }} - {{ product.name }} - {{ product.price | currency }}
+      </li>
+    </ul> -->
+<app-navbar-private></app-navbar-private>
+
+
+<div class="page-wrapper">
+  <div class="card">
+    <h2>Available Products</h2>
+
+    <div *ngIf="loading" class="center-note">Loading products...</div>
+    <div *ngIf="!loading && products.length === 0" class="center-note">No products found.</div>
+
+    <table *ngIf="!loading && products.length > 0" class="table-modern">
+      <thead>
+        <tr>
+          <th style="width:80px;">#</th>
+          <th>Name</th>
+          <th>Description</th>
+          <th style="width:140px; text-align:right;">Price</th>
+          <th style="width:100px;">In Stock</th>
+          <th style="width:120px;">Order</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products; let i = index">
+          <td>{{ i + 1 }}</td>
+          <td>{{ product.name }}</td>
+          <td class="muted">{{ product.description }}</td>
+          <td style="text-align:right">{{ product.price | currency }}</td>
+          <td>{{ product.inStock ? 'Yes' : 'No' }}</td>
+          <td>
+            <button class="row-action-btn" mat-stroked-button color="accent" (click)="openNewOrder(product)">
+              Order
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

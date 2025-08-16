@@ -1,0 +1,18 @@
+<mat-toolbar color="primary">
+  <span class="brand"><a routerLink="/" style="text-decoration:none;color:inherit;">Client Portal</a></span>
+  <span class="spacer"></span>
+
+  <button mat-button routerLink="/products" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Products</button>
+  <button mat-button routerLink="/orders" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Orders</button>
+
+  <!-- Profile button with icon -->
+  <button mat-button routerLink="/profile" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+    <span class="mat-toolbar-button-with-icon">
+      <mat-icon aria-hidden="false" aria-label="Profile">account_circle</mat-icon>
+      Profile
+    </span>
+  </button>
+
+  <!-- Logout (note: you might want to call logout function instead of routerLink) -->
+  <button mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Logout</button>
+</mat-toolbar>

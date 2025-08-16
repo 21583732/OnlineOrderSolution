@@ -1,0 +1,27 @@
+<!-- confirm-cancel-dialog.html -->
+<h2 mat-dialog-title *ngIf="!message">Cancel Order</h2>
+
+<mat-dialog-content>
+  <div *ngIf="!message">
+    <p>Are you sure you want to cancel this order?</p>
+  </div>
+
+  <div *ngIf="message" style="font-weight:600; color: green;">
+    {{ message }}
+  </div>
+
+  <div *ngIf="!message && loading" style="margin-top:8px;">
+    <p>Processing…</p>
+  </div>
+
+  <div *ngIf="message && loading === false" style="margin-top:8px;">
+    <!-- message shown while waiting to auto-close -->
+  </div>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end" *ngIf="!message">
+  <button mat-button (click)="onNo()" [disabled]="loading">No</button>
+  <button mat-raised-button color="warn" (click)="onYes()" [disabled]="loading">Yes</button>
+</mat-dialog-actions>
+
+<!-- No actions shown while showing "Order cancelled" message; dialog will auto-close -->

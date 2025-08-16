@@ -1,0 +1,67 @@
+:host { display:block; }
+
+.page-wrapper {
+  min-height: calc(100vh - 64px); /* leave room for toolbar */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1px 16px 80px;
+  background: #ecf0f3; /* the neutral page background you requested */
+}
+
+.profile-card {
+  width: 100%;
+  max-width: 920px;
+  padding: 24px;
+  padding: 28px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.04); /* subtle card contrast */
+  box-shadow: 0 36px 36px rgba(252, 1, 1, 0.12);
+  border: 6px solid rgba(0, 0, 0, 0.06);
+  color: #000000;
+  text-align: center;
+}
+
+.profile-top {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+.profile-icon {
+  font-size: 76px;
+  color: #3b2980;
+  background: rgb(214, 84, 84);
+  border-radius: 50%;
+  padding: 6px;
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
+}
+
+.profile-name {
+  font-size: 1.4rem;
+  font-weight: 600;
+}
+
+.profile-email {
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.actions {
+  margin-top: 16px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.center-note {
+  padding: 24px 0;
+  color: #fff;
+}
+
+.error {
+  padding: 12px 0;
+  color: #ffd4d4;
+  font-weight: 600;
+}

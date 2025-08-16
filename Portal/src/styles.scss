@@ -1,0 +1,203 @@
+
+// Include theming for Angular Material with `mat.theme()`.
+// This Sass mixin will define CSS variables that are used for styling Angular Material
+// components according to the Material 3 design spec.
+// Learn more about theming and how to use it for your application's
+// custom components at https://material.angular.dev/guide/theming
+@use '@angular/material' as mat;
+
+html {
+  @include mat.theme((
+    color: (
+      primary: mat.$rose-palette,
+      tertiary: mat.$red-palette,
+    ),
+    typography: Roboto,
+    density: 0,
+  ));
+}
+
+//body {
+  // Default the application to a light color theme. This can be changed to
+  // `dark` to enable the dark color theme, or to `light dark` to defer to the
+  // user's system settings.
+  //color-scheme: light;
+
+  // Set a default background, font and text colors for the application using
+  // Angular Material's system-level CSS variables. Learn more about these
+  // variables at https://material.angular.dev/guide/system-variables
+  //background-color: var(--mat-sys-surface);
+  //color: var(--mat-sys-on-surface);
+  //font: var(--mat-sys-body-medium);
+
+  // Reset the user agent margin.
+  //margin: 0;
+//}
+/* You can add global styles to this file, and also import other style files */
+
+//  html, body { height: 100%; }
+//  body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+
+
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* styles.scss — global app styles and theme tweaks */
+
+:root{
+  --page-bg: #ecf0f3;      /* neutral background requested */
+  --card-bg: #3300ff;      /* slightly different from page background (subtle) */
+  --card-contrast: rgb(180, 163, 163);
+  --accent: #4A2FB5;       /* Victoria color already used for toolbar */
+  --muted-text: #222;
+}
+
+/* Body / page background */
+html, body, app-root {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", Arial, sans-serif;
+  background-color: var(--page-bg);
+  color: var(--muted-text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* App container that centers page content */
+.app-container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Generic page wrapper used by each page template */
+.page-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px 80px;
+}
+
+/* Card used to hold page content — soft contrast with background */
+.card {
+  width: 100%;
+  max-width: 920px;
+  background: linear-gradient(180deg, rgba(41, 78, 148, 0.02), rgba(49, 139, 155, 0.02));
+  border-radius: 12px;
+  padding: 28px;
+  box-shadow: 0 36px 18px rgba(17, 0, 255, 0.12);
+  border: 2px solid rgba(0, 0, 0, 0.06);
+  backdrop-filter: blur(4px);
+}
+
+/* Headings inside card */
+.card h1, .card h2 {
+  margin: 0 0 12px;
+  color: #000000;
+  font-weight: 600;
+  text-shadow: 0 1px 0 rgba(0,0,0,0.25);
+}
+
+/* Subtext */
+.card p {
+  color: rgba(0, 0, 0, 0.9);
+  margin-bottom: 16px;
+}
+
+/* Make mat-form-field stretch full-width inside card and stack vertically */
+.card form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.card mat-form-field {
+  width: 100%;
+}
+
+/* Buttons row center */
+.card .actions {
+  display:flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 8px;
+}
+
+/* Table common style for modern look */
+.table-modern {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+  border-radius: 8px;
+  background: rgba(15, 2, 43, 0.03);
+  color: #fff;
+}
+
+/* table head */
+.table-modern thead th {
+  text-align: left;
+  padding: 12px 14px;
+  font-weight: 600;
+  background: rgba(0,0,0,0.18);
+  color: #000000;
+  font-size: 0.95rem;
+}
+
+/* table rows */
+.table-modern tbody td {
+  padding: 12px 14px;
+  border-top: 1px solid rgba(255,255,255,0.04);
+  color: rgba(0, 0, 0, 0.95);
+}
+
+/* zebra */
+.table-modern tbody tr:nth-child(even) {
+  background: rgba(255,255,255,0.02);
+}
+
+/* small muted text */
+.muted {
+  color: rgba(0, 0, 0, 0.75);
+  font-size: 0.9rem;
+}
+
+/* Buttons inside table rows */
+.row-action-btn {
+  min-width: 90px;
+}
+
+/* Loading / empty state cards */
+.center-note {
+  text-align: center;
+  padding: 22px;
+  color: rgba(255,255,255,0.95);
+}
+
+/* Navbar tweaks (private navbar already has Victoria colour) */
+mat-toolbar {
+  /* keep existing color variable, but make toolbar elevated */
+  box-shadow: 0 2px 8px rgba(0,0,0,0.18);
+}
+
+/* active-link: pill highlight (makes current page feel 'circled') */
+.active-link {
+  background-color: rgba(255,255,255,0.12) !important;
+  color: white !important;
+  border-radius: 999px !important;
+  padding: 6px 12px !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Make mat buttons in toolbar align nicely with icons */
+.mat-toolbar-button-with-icon {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* small responsive tweaks */
+@media (max-width: 720px) {
+  .card { padding: 18px; }
+  .table-modern thead th, .table-modern tbody td { padding: 10px; font-size: 0.9rem; }
+}

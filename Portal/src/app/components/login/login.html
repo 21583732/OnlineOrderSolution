@@ -1,0 +1,31 @@
+<app-navbar-public></app-navbar-public>
+
+<div class="page-wrapper">
+  <div class="card" style="max-width:420px; margin: 0 auto;">
+    <h2 style="text-align:center;">Login</h2>
+    <form (ngSubmit)="onLogin()">
+      <mat-form-field appearance="fill">
+        <mat-label>Username</mat-label>
+        <input matInput [(ngModel)]="username" name="username" required />
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+        <mat-label>Password</mat-label>
+        <input matInput [(ngModel)]="password" name="password" type="password" required />
+      </mat-form-field>
+
+      <div class="actions">
+        <button mat-raised-button color="primary" type="submit">Login</button>
+      </div>
+    </form>
+
+    <div *ngIf="errorMessage" style="color: #ffd4d4; margin-top: 10px; text-align:center;">
+      {{ errorMessage }}
+    </div>
+
+    <p style="margin-top:12px; text-align:center;" class="muted">
+      Not registered? <a routerLink="/register">Register here</a>
+    </p>
+  </div>
+</div>
+
