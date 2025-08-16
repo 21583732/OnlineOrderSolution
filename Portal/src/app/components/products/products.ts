@@ -26,7 +26,10 @@ export class ProductsComponent implements OnInit {
     this.api.getProducts().subscribe({
       next: (data) => {
         console.log('Products from API:', data);
-        this.products = data;
+        this.products = data.map((p: any) => ({
+        ...p,
+        inStock: !!p.inStock
+      }));
         this.loading = false; // ✅ Ensure loading is switched off
         this.cdr.detectChanges();
       },

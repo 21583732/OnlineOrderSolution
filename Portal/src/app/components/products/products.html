@@ -34,7 +34,7 @@
           <td style="text-align:right">{{ product.price | currency }}</td>
           <td>{{ product.inStock ? 'Yes' : 'No' }}</td>
           <td>
-            <button class="row-action-btn" mat-stroked-button color="accent" (click)="openNewOrder(product)">
+            <button class="row-action-btn" mat-stroked-button color="accent" (click)="openNewOrder(product)" [disabled]="!product.inStock">
               Order
             </button>
           </td>
