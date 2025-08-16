@@ -55,6 +55,7 @@ export class OrdersComponent implements OnInit, OnDestroy {
         }
       })
     );
+    this.cdr.detectChanges();
 
     this.api.getOrdersForClient(clientId).subscribe({
       next: (data) => {
@@ -69,6 +70,7 @@ export class OrdersComponent implements OnInit, OnDestroy {
         this.cdr.detectChanges();
       }
     });
+    this.cdr.detectChanges();
   }
 
   viewOrder(orderId: number) {

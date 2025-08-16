@@ -5,14 +5,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\onlineordersolution\\clientportal.api\\clientportal.api\\services\\orderstatusbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\services\\orderstatusbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\onlineordersolution\\clientportal.api\\clientportal.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\onlineordersolution\\clientportal.api\\clientportal.api\\hubs\\orderhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\hubs\\orderhub.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,34 +24,10 @@
               "RelativeDocumentMoniker": "ClientPortal.Api\\Services\\OrderStatusBackgroundService.cs",
               "ToolTip": "C:\\Users\\vutom\\Documents\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Services\\OrderStatusBackgroundService.cs",
               "RelativeToolTip": "ClientPortal.Api\\Services\\OrderStatusBackgroundService.cs",
-              "ViewState": "AgIAADYAAAAAAAAAAAAowEcAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAABQAAAAAAAAAAAAQwB8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-16T13:29:07.522Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "OrderHub.cs",
-              "DocumentMoniker": "C:\\Users\\vutom\\Documents\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Hubs\\OrderHub.cs",
-              "RelativeDocumentMoniker": "ClientPortal.Api\\Hubs\\OrderHub.cs",
-              "ToolTip": "C:\\Users\\vutom\\Documents\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Hubs\\OrderHub.cs",
-              "RelativeToolTip": "ClientPortal.Api\\Hubs\\OrderHub.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-16T13:07:53.767Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\vutom\\Documents\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Program.cs",
-              "RelativeDocumentMoniker": "ClientPortal.Api\\Program.cs",
-              "ToolTip": "C:\\Users\\vutom\\Documents\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Program.cs",
-              "RelativeToolTip": "ClientPortal.Api\\Program.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAUwIkAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-16T13:02:39.527Z"
             }
           ]
         }
