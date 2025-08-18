@@ -54,8 +54,7 @@
               "RelativeToolTip": "ClientPortal.Api\\appsettings.Production.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-18T00:34:28.068Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T00:34:28.068Z"
             },
             {
               "$type": "Document",
@@ -67,8 +66,7 @@
               "RelativeToolTip": "ClientPortal.Api\\appsettings.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAADaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-08-18T00:48:57.467Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T00:48:57.467Z"
             },
             {
               "$type": "Document",
@@ -78,7 +76,7 @@
               "RelativeDocumentMoniker": "ClientPortal.Api\\Models\\ClientPortalContext.cs",
               "ToolTip": "C:\\Users\\vutom\\Documents\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Models\\ClientPortalContext.cs",
               "RelativeToolTip": "ClientPortal.Api\\Models\\ClientPortalContext.cs",
-              "ViewState": "AgIAAFMAAAAAAAAAAAAswFwAAACdAAAAAAAAAA==",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAswFwAAACdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-18T03:38:30.394Z",
               "EditorCaption": ""
@@ -93,8 +91,7 @@
               "RelativeToolTip": "ClientPortal.Api\\Models\\ClientPortalContextFactory.cs",
               "ViewState": "AgIAAAgAAAAAAAAAAAAAwBsAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T06:37:24.187Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T06:37:24.187Z"
             },
             {
               "$type": "Document",
@@ -106,8 +103,7 @@
               "RelativeToolTip": "ClientPortal.Api\\Migrations\\20250818023619_InitialCreate.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAHwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T02:36:19.799Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T02:36:19.799Z"
             },
             {
               "$type": "Document",
@@ -119,8 +115,7 @@
               "RelativeToolTip": "ClientPortal.Api\\Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAEcAAABSAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-18T01:59:57.239Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-18T01:59:57.239Z"
             },
             {
               "$type": "Document",
