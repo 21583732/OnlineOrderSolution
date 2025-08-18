@@ -1,10 +1,11 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { environment } from '../../environments/environment';
 
 @Injectable()
 export class ApiService {
-  private baseUrl = 'http://localhost:5240/api';
+  private baseUrl = environment.apiUrl;
   //readonly
   constructor(private http: HttpClient) {}
 

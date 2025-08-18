@@ -3,6 +3,14 @@
   "WorkspaceRootPath": "C:\\Users\\vutom\\Documents\\OnlineOrderSolution\\ClientPortal.Api\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\onlineordersolution\\clientportal.api\\clientportal.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\onlineordersolution\\clientportal.api\\clientportal.api\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\appsettings.production.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\onlineordersolution\\clientportal.api\\clientportal.api\\services\\orderstatusbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\services\\orderstatusbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -19,15 +27,39 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "C:\\Users\\vutom\\Documents\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\appsettings.json",
+              "RelativeDocumentMoniker": "ClientPortal.Api\\appsettings.json",
+              "ToolTip": "C:\\Users\\vutom\\Documents\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\appsettings.json",
+              "RelativeToolTip": "ClientPortal.Api\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAVAQAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-18T00:48:57.467Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "appsettings.Production.json",
+              "DocumentMoniker": "C:\\Users\\vutom\\Documents\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\appsettings.Production.json",
+              "RelativeDocumentMoniker": "ClientPortal.Api\\appsettings.Production.json",
+              "ToolTip": "C:\\Users\\vutom\\Documents\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\appsettings.Production.json",
+              "RelativeToolTip": "ClientPortal.Api\\appsettings.Production.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-08-18T00:34:28.068Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "OrderStatusBackgroundService.cs",
               "DocumentMoniker": "C:\\Users\\vutom\\Documents\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Services\\OrderStatusBackgroundService.cs",
               "RelativeDocumentMoniker": "ClientPortal.Api\\Services\\OrderStatusBackgroundService.cs",
               "ToolTip": "C:\\Users\\vutom\\Documents\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Services\\OrderStatusBackgroundService.cs",
               "RelativeToolTip": "ClientPortal.Api\\Services\\OrderStatusBackgroundService.cs",
-              "ViewState": "AgIAADUAAAAAAAAAAAA9wEIAAAAyAAAAAAAAAA==",
+              "ViewState": "AgIAADYAAAAAAAAAAAAowEIAAAAyAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-16T13:29:07.522Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-16T13:29:07.522Z"
             }
           ]
         }

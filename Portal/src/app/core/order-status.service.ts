@@ -3,10 +3,11 @@ import { Injectable } from '@angular/core';
 import { HubConnection, HubConnectionBuilder, HubConnectionState } from '@microsoft/signalr';
 import { Subject, Observable } from 'rxjs';
 import { AuthService } from './auth.service';
+import { environment } from '../../environments/environment';
 
 @Injectable({ providedIn: 'root' })
 export class OrderStatusService {
-  private hubUrl = 'http://localhost:5240/orderHub';
+  private hubUrl = environment.hubUrl;
   private connection: HubConnection | null = null;
   private orderUpdatedSubject = new Subject<any>();
 
