@@ -82,6 +82,28 @@ public partial class ClientPortalContext : DbContext
                 .IsRequired()
                 .HasMaxLength(200);
             entity.Property(e => e.Price).HasColumnType("decimal(18, 2)");
+
+            entity.HasData(
+                new Product { ProductId = 1, Name = "Laptop Pro 15", Description = "High-performance laptop with 15-inch display", Price = 1499.99m, InStock = true },
+                new Product { ProductId = 2, Name = "Wireless Mouse", Description = "Ergonomic wireless mouse", Price = 29.99m, InStock = true },
+                new Product { ProductId = 3, Name = "Mechanical Keyboard", Description = "RGB backlit mechanical keyboard", Price = 89.99m, InStock = false },
+                new Product { ProductId = 4, Name = "27-inch Monitor", Description = "4K UHD IPS monitor", Price = 349.99m, InStock = true },
+                new Product { ProductId = 5, Name = "Noise Cancelling Headphones", Description = "Over-ear noise-cancelling headphones", Price = 199.99m, InStock = true },
+                new Product { ProductId = 6, Name = "External SSD 1TB", Description = "Portable 1TB external SSD", Price = 129.99m, InStock = true },
+                new Product { ProductId = 7, Name = "Smartphone X", Description = "Latest-gen smartphone with OLED display", Price = 999.99m, InStock = false },
+                new Product { ProductId = 8, Name = "Tablet Air 11", Description = "Lightweight tablet with stylus support", Price = 599.99m, InStock = true },
+                new Product { ProductId = 9, Name = "Bluetooth Speaker", Description = "Portable waterproof speaker", Price = 79.99m, InStock = true },
+                new Product { ProductId = 10, Name = "Smartwatch S", Description = "Fitness-focused smartwatch", Price = 249.99m, InStock = true },
+                new Product { ProductId = 11, Name = "Gaming Chair", Description = "Ergonomic chair for long sessions", Price = 199.99m, InStock = true },
+                new Product { ProductId = 12, Name = "4K Webcam", Description = "High-resolution webcam for streaming", Price = 129.99m, InStock = true },
+                new Product { ProductId = 13, Name = "VR Headset", Description = "Immersive virtual reality headset", Price = 399.99m, InStock = true },
+                new Product { ProductId = 14, Name = "Portable Charger 20k mAh", Description = "High-capacity power bank", Price = 49.99m, InStock = true },
+                new Product { ProductId = 15, Name = "Drone 4K", Description = "Compact drone with 4K camera", Price = 599.99m, InStock = true },
+                new Product { ProductId = 16, Name = "Smart Home Hub", Description = "Voice-controlled smart hub", Price = 99.99m, InStock = true },
+                new Product { ProductId = 17, Name = "Gaming Console Z", Description = "Next-gen gaming console", Price = 499.99m, InStock = true },
+                new Product { ProductId = 18, Name = "Electric Scooter", Description = "Foldable e-scooter with long range", Price = 699.99m, InStock = true },
+                new Product { ProductId = 19, Name = "Smart Light Bulb Pack", Description = "Wi-Fi enabled LED bulbs", Price = 59.99m, InStock = true },
+                new Product { ProductId = 20, Name = "Action Camera", Description = "Waterproof 4K action camera", Price = 249.99m, InStock = true });
         });
 
         OnModelCreatingPartial(modelBuilder);

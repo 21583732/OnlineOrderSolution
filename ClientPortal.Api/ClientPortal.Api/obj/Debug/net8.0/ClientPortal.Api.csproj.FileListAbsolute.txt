@@ -583,7 +583,6 @@ C:\Users\vutom\Documents\OnlineOrderSolution\ClientPortal.Api\ClientPortal.Api\o
 C:\Users\vutom\Documents\OnlineOrderSolution\ClientPortal.Api\ClientPortal.Api\obj\Debug\net8.0\staticwebassets.build.json.cache
 C:\Users\vutom\Documents\OnlineOrderSolution\ClientPortal.Api\ClientPortal.Api\obj\Debug\net8.0\staticwebassets.development.json
 C:\Users\vutom\Documents\OnlineOrderSolution\ClientPortal.Api\ClientPortal.Api\obj\Debug\net8.0\staticwebassets.build.endpoints.json
-C:\Users\vutom\Documents\OnlineOrderSolution\ClientPortal.Api\ClientPortal.Api\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\vutom\Documents\OnlineOrderSolution\ClientPortal.Api\ClientPortal.Api\obj\Debug\net8.0\ClientPo.9497E1CD.Up2Date
 C:\Users\vutom\Documents\OnlineOrderSolution\ClientPortal.Api\ClientPortal.Api\obj\Debug\net8.0\ClientPortal.Api.dll
 C:\Users\vutom\Documents\OnlineOrderSolution\ClientPortal.Api\ClientPortal.Api\obj\Debug\net8.0\refint\ClientPortal.Api.dll
