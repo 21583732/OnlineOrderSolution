@@ -590,3 +590,5 @@ C:\Users\vutom\Documents\OnlineOrderSolution\ClientPortal.Api\ClientPortal.Api\o
 C:\Users\vutom\Documents\OnlineOrderSolution\ClientPortal.Api\ClientPortal.Api\obj\Debug\net8.0\ClientPortal.Api.pdb
 C:\Users\vutom\Documents\OnlineOrderSolution\ClientPortal.Api\ClientPortal.Api\obj\Debug\net8.0\ClientPortal.Api.genruntimeconfig.cache
 C:\Users\vutom\Documents\OnlineOrderSolution\ClientPortal.Api\ClientPortal.Api\obj\Debug\net8.0\ref\ClientPortal.Api.dll
+C:\Users\vutom\Documents\OnlineOrderSolution\ClientPortal.Api\ClientPortal.Api\bin\Debug\net8.0\appsettings.Production.json
+C:\Users\vutom\Documents\OnlineOrderSolution\ClientPortal.Api\ClientPortal.Api\obj\Debug\net8.0\ClientPortal.Api.sourcelink.json

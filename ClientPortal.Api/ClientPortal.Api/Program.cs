@@ -66,8 +66,10 @@ builder.Services.AddSwaggerGen(c =>
 // Enable CORS for local development
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowLocalhost4200",
-        policy => policy.WithOrigins("http://localhost:4200")
+    options.AddPolicy("AllowFrontend",
+        policy => policy.WithOrigins(
+                        "http://localhost:4200",
+                        "https://zealous-mushroom-00043a803.2.azurestaticapps.net")
                         .AllowAnyHeader()
                         .AllowAnyMethod()
                         .AllowCredentials());
@@ -119,16 +121,17 @@ builder.Services.AddHostedService<OrderStatusBackgroundService>();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
+// ? Swagger available in prod too
+app.UseSwagger();
+app.UseSwaggerUI(c =>
 {
-    app.UseSwagger();
-    app.UseSwaggerUI();
-}
+    c.SwaggerEndpoint("/swagger/v1/swagger.json", "ClientPortal API v1");
+    c.RoutePrefix = string.Empty; // Swagger at root URL
+});
 
 ///app.UseHttpsRedirection();
 
-app.UseCors("AllowLocalhost4200"); // <-- enable CORS
+app.UseCors("AllowFrontend"); // <-- enable CORS
 app.UseAuthentication();
 
 app.UseAuthorization();
