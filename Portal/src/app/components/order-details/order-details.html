@@ -24,7 +24,7 @@
           <tr *ngFor="let it of order.orderItems">
             <td>{{ it.product?.name }}</td>
             <td>{{ it.quantity }}</td>
-            <td style="text-align:right">{{ it.unitPrice | currency }}</td>
+            <td style="text-align:right">{{ (it.unitPrice * it.quantity) | currency }}</td>  <!--Eddited-->
           </tr>
         </tbody>
       </table>
