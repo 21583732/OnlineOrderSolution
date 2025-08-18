@@ -23,11 +23,14 @@ jobs:
         with:
           dotnet-version: '8.x'
 
-      - name: Build with dotnet
-        run: dotnet build --configuration Release
+      - name: Restore dependencies
+        run: dotnet restore ./ClientPortal.Api/ClientPortal.Api/ClientPortal.Api.csproj
 
-      - name: dotnet publish
-        run: dotnet publish -c Release -o "${{env.DOTNET_ROOT}}/myapp"
+      - name: Build with dotnet
+        run: dotnet build ./ClientPortal.Api/ClientPortal.Api/ClientPortal.Api.csproj --configuration Release --no-restore
+
+      - name: Publish app
+        run: dotnet publish ./ClientPortal.Api/ClientPortal.Api/ClientPortal.Api.csproj --configuration Release --no-build --output "${{env.DOTNET_ROOT}}/myapp"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
@@ -52,4 +55,5 @@ jobs:
           app-name: 'clientportal-api'
           slot-name: 'Production'
           package: .
+
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_A794E7270D5E4B37949A958E18BEA7B2 }}
