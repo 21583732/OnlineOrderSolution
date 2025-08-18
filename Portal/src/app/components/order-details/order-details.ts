@@ -113,4 +113,13 @@ export class OrderDetailsComponent implements OnInit, OnDestroy {
     this.subs.forEach(s => s.unsubscribe());
     this.cdr.detectChanges();
   }
+  ////New added
+  getOrderTotal(): number {
+  if (!this.order || !this.order.orderItems) return 0;
+  return this.order.orderItems.reduce((sum: number, it: any) => {
+    const qty = Number(it?.quantity) || 0;
+    const price = Number(it?.unitPrice) || 0;
+    return sum + (qty * price);
+  }, 0);
+}
 }
