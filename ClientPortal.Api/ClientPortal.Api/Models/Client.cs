@@ -17,5 +17,7 @@ public partial class Client
 
     public DateTime? CreatedAt { get; set; }
 
+    public virtual ICollection<Cart> Carts { get; set; } = new List<Cart>();
+
     public virtual ICollection<Order> Orders { get; set; } = new List<Order>();
 }

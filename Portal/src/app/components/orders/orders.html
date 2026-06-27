@@ -24,7 +24,7 @@
           <td>
             <ul class="muted" style="margin:0; padding-left: 18px;">
               <li *ngFor="let it of order.orderItems">
-                {{ it.product?.name }} x{{ it.quantity }} @ {{ it.unitPrice | currency }}
+                {{ it.product?.name }} x{{ it.quantity }} @ {{ it.unitPrice | currency:'ZAR':'symbol':'1.2-2' }}
               </li>
             </ul>
           </td>
@@ -35,6 +35,6 @@
       </tbody>
     </table>
 
-    <div *ngIf="!loading && orders.length === 0" class="center-note">You have no orders.</div>
+    <div *ngIf="!loading && orders.length === 0" class="center-note">You have no orders.... Yet😉. Browse our products to place an order!</div>
   </div>
 </div>

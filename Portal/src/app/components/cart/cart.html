@@ -1,0 +1,63 @@
+<app-navbar-private></app-navbar-private>
+
+<div class="page-wrapper">
+  <div class="card">
+    <h2>Your Cart</h2>
+
+    <div *ngIf="loading" class="center-note">Loading cart...</div>
+    <div *ngIf="error" style="color:#ffb3b3;">{{ error }}</div>
+
+    <div *ngIf="!loading && cart && cart.items.length === 0" class="center-note">
+      Your cart is empty. Browse our products to add items to your cart!
+    </div>
+
+    <table *ngIf="cart && cart.items.length > 0" class="table-modern">
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th style="width:120px;">Price</th>
+          <th style="width:140px;">Quantity</th>
+          <th style="width:120px;">Total</th>
+          <th style="width:120px;">Actions</th>
+        </tr>
+      </thead>
+
+      <tbody>
+        <tr *ngFor="let item of cart.items">
+          <td>{{ item.productName }}</td>
+          <td>{{ item.unitPrice | currency:'ZAR':'symbol':'1.2-2' }}</td>
+
+          <td>
+            <input
+              type="number"
+              [value]="item.quantity"
+              min="1"
+              (change)="onQuantityChange(item, $event)"
+            />
+          </td>
+
+          <td>{{ item.unitPrice * item.quantity | currency:'ZAR':'symbol':'1.2-2' }}</td>
+
+          <td>
+            <button mat-stroked-button color="warn" (click)="removeItem(item)">
+              Remove
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div *ngIf="cart && cart.items.length > 0" style="margin-top: 20px;">
+      <h3>Total: {{ cart.total | currency:'ZAR':'symbol':'1.2-2' }}</h3>
+
+      <button
+        mat-raised-button
+        color="primary"
+        (click)="checkout()"
+        [disabled]="checkingOut"
+      >
+        Checkout
+      </button>
+    </div>
+  </div>
+</div>

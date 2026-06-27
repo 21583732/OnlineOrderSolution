@@ -1,7 +1,7 @@
-// confirm-cancel-dialog.ts
 import { Component, Inject, ChangeDetectorRef } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
 import { ApiService } from '../../core/api.service';
+import { AppStateService } from '../../core/app-state.service';
 
 @Component({
   selector: 'app-confirm-cancel-dialog',
@@ -11,13 +11,13 @@ import { ApiService } from '../../core/api.service';
 })
 export class ConfirmCancelDialogComponent {
   loading = false;
-  message = ''; // used to display "Order cancelled" or errors
+  message = '';
 
-  // data: expected to contain { orderId: number }
   constructor(
     @Inject(MAT_DIALOG_DATA) public data: { orderId: number },
     private dialogRef: MatDialogRef<ConfirmCancelDialogComponent>,
     private api: ApiService,
+    private appState: AppStateService,
     private cdr: ChangeDetectorRef
   ) {}
 
@@ -34,22 +34,19 @@ export class ConfirmCancelDialogComponent {
 
     this.loading = true;
     this.message = '';
-    this.cdr.detectChanges();
 
     this.api.deleteOrder(this.data.orderId).subscribe({
       next: () => {
-        // show cancelled message in dialog
         this.loading = false;
         this.message = 'Order cancelled';
+
+        this.appState.refreshNewOrdersCount();
+
         this.cdr.detectChanges();
 
-        // keep message for 3 seconds then close with true
-        setTimeout(() => {
-          this.dialogRef.close(true);
-        }, 3000);
+        setTimeout(() => this.dialogRef.close(true), 1200);
       },
       error: (err) => {
-        console.error('Failed to cancel order', err);
         this.loading = false;
         this.message = err?.error?.message || 'Failed to cancel order';
         this.cdr.detectChanges();

@@ -1,0 +1,35 @@
+<h2 mat-dialog-title>Add to Cart</h2>
+
+<mat-dialog-content>
+
+  <p><strong>{{ product.name }}</strong></p>
+  <p>{{ product.price | currency }}</p>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Quantity</mat-label>
+    <input matInput type="number" [(ngModel)]="quantity" min="1" />
+  </mat-form-field>
+
+  <div *ngIf="error" style="color:red;">
+    {{ error }}
+  </div>
+
+  <div *ngIf="successMessage" style="color:green; font-weight:600;">
+    {{ successMessage }}
+  </div>
+
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+
+  <button mat-button (click)="cancel()" [disabled]="submitting">
+    Cancel
+  </button>
+
+  <button mat-raised-button color="primary"
+          (click)="addToCart()"
+          [disabled]="submitting">
+    Add
+  </button>
+
+</mat-dialog-actions>

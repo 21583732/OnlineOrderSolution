@@ -1,9 +1,66 @@
 <mat-toolbar color="primary">
-  <span class="brand"><a routerLink="/" style="text-decoration:none;color:inherit;">Client Portal</a></span>
+  <span class="brand">
+    <a routerLink="/products" style="text-decoration:none;color:inherit;">Client Portal</a>
+  </span>
+
   <span class="spacer"></span>
 
-  <button mat-button routerLink="/products" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Products</button>
-  <button mat-button routerLink="/orders" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Orders</button>
+  <button mat-button routerLink="/products" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+    <span class="mat-toolbar-button-with-icon">
+      <mat-icon aria-hidden="false" aria-label="Products">inventory</mat-icon>
+      Products
+    </span>
+  </button>
+  
+  <button mat-button routerLink="/orders" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+    <span class="mat-toolbar-button-with-icon">
+      <mat-icon aria-hidden="false" aria-label="Orders">list</mat-icon>
+      Orders
+
+      <span
+        *ngIf="newOrdersCount > 0"
+        style="
+          margin-left:8px;
+          background:#ff5252;
+          color:white;
+          border-radius:50%;
+          min-width:22px;
+          height:22px;
+          display:inline-flex;
+          align-items:center;
+          justify-content:center;
+          font-size:12px;
+          font-weight:bold;">
+        {{ newOrdersCount }}
+      </span>
+
+    </span>
+  </button>
+
+  <!-- NEW -->
+  <button mat-button routerLink="/cart" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+    <span class="mat-toolbar-button-with-icon">
+      <mat-icon aria-hidden="false" aria-label="Cart">shopping_cart</mat-icon>
+      Cart
+
+      <span
+        *ngIf="cartCount > 0"
+        style="
+          margin-left:8px;
+          background:#4caf50;
+          color:white;
+          border-radius:50%;
+          min-width:22px;
+          height:22px;
+          display:inline-flex;
+          align-items:center;
+          justify-content:center;
+          font-size:12px;
+          font-weight:bold;">
+        {{ cartCount }}
+      </span>
+    </span>
+  </button>
 
   <!-- Profile button with icon -->
   <button mat-button routerLink="/profile" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
@@ -14,5 +71,9 @@
   </button>
 
   <!-- Logout (note: you might want to call logout function instead of routerLink) -->
-  <button mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">Logout</button>
+  <button mat-button routerLink="/" routerLinkActive="active-link" [routerLinkActiveOptions]="{ exact: true }">
+    <span class="mat-toolbar-button-with-icon">
+      <mat-icon aria-hidden="false" aria-label="Logout">exit_to_app</mat-icon>
+    </span>
+  </button>
 </mat-toolbar>

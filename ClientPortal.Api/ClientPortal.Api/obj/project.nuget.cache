@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "ptvAqQxc69g=",
+  "dgSpecHash": "vlVFPwXVYZs=",
   "success": true,
-  "projectFilePath": "C:\\Users\\vutom\\Documents\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\ClientPortal.Api.csproj",
+  "projectFilePath": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\ClientPortal.Api.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\vutom\\.nuget\\packages\\azure.core\\1.38.0\\azure.core.1.38.0.nupkg.sha512",
     "C:\\Users\\vutom\\.nuget\\packages\\azure.identity\\1.11.4\\azure.identity.1.11.4.nupkg.sha512",
