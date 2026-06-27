@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "targets": {
     "net8.0": {
       "Azure.Core/1.38.0": {
@@ -9017,11 +9017,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\vutom\\Documents\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\ClientPortal.Api.csproj",
+      "projectUniqueName": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\ClientPortal.Api.csproj",
       "projectName": "ClientPortal.Api",
-      "projectPath": "C:\\Users\\vutom\\Documents\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\ClientPortal.Api.csproj",
+      "projectPath": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\ClientPortal.Api.csproj",
       "packagesPath": "C:\\Users\\vutom\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\vutom\\Documents\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\obj\\",
+      "outputPath": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -9036,11 +9036,11 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0": {
+          "framework": "net8.0",
           "targetAlias": "net8.0",
           "projectReferences": {}
         }
@@ -9055,10 +9055,11 @@
         "auditLevel": "low",
         "auditMode": "direct"
       },
-      "SdkAnalysisLevel": "9.0.300"
+      "SdkAnalysisLevel": "10.0.300"
     },
     "frameworks": {
       "net8.0": {
+        "framework": "net8.0",
         "targetAlias": "net8.0",
         "dependencies": {
           "Microsoft.AspNetCore.Authentication.JwtBearer": {
@@ -9113,7 +9114,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.304/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.301/PortableRuntimeIdentifierGraph.json"
       }
     }
   }

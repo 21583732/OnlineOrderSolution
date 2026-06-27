@@ -59,4 +59,27 @@ export class ApiService {
   getClientById(id: number): Observable<any> {
     return this.http.get(`${this.baseUrl}/Clients/${id}`);
   }
+
+  // Cart
+getCart(clientId: number): Observable<any> {
+  return this.http.get(`${this.baseUrl}/cart/${clientId}`);
+}
+
+addToCart(data: any): Observable<any> {
+  return this.http.post(`${this.baseUrl}/cart/add`, data);
+}
+
+updateCartItem(data: any): Observable<any> {
+  return this.http.put(`${this.baseUrl}/cart/update`, data);
+}
+
+removeCartItem(cartItemId: number): Observable<any> {
+  return this.http.delete(`${this.baseUrl}/cart/remove/${cartItemId}`);
+}
+
+checkoutCart(clientId: number): Observable<any> {
+  return this.http.post(`${this.baseUrl}/cart/checkout/${clientId}`, {});
+}
+
+
 }

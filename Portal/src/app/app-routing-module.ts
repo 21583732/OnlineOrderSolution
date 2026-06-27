@@ -7,8 +7,9 @@ import { WelcomeComponent } from './components/welcome/welcome';
 import { ProductsComponent } from './components/products/products';
 import { OrdersComponent } from './components/orders/orders';
 import { OrderDetailsComponent } from './components/order-details/order-details';
-import { NewOrderComponent } from './components/new-order/new-order';
+import { AddToCartComponent } from './components/add-to-cart/add-to-cart';
 import { ProfileComponent } from './components/profile/profile';
+import { CartComponent } from './components/cart/cart';
 
 import { AuthGuard } from './core/auth.guard';
 
@@ -22,8 +23,11 @@ const routes: Routes = [
   { path: 'products', component: ProductsComponent, canActivate: [AuthGuard] },
   { path: 'orders', component: OrdersComponent, canActivate: [AuthGuard] },
   { path: 'orders/:id', component: OrderDetailsComponent, canActivate: [AuthGuard] },
-  { path: 'new-order', component: NewOrderComponent, canActivate: [AuthGuard] },
+  { path: 'new-order', component: AddToCartComponent, canActivate: [AuthGuard] },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
+
+   // NEW
+  { path: 'cart', component: CartComponent, canActivate: [AuthGuard] },
 
   // Fallback
   { path: '**', redirectTo: '' }

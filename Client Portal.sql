@@ -28,6 +28,33 @@ CREATE TABLE Orders (
   FOREIGN KEY(ClientId) REFERENCES Clients(ClientId)
 );
 
+CREATE TABLE Cart
+(
+    CartId INT IDENTITY(1,1) PRIMARY KEY,
+    ClientId INT NOT NULL,
+    CreatedAt DATETIME2 NOT NULL DEFAULT(GETDATE()),
+
+    CONSTRAINT FK_Cart_Client
+        FOREIGN KEY (ClientId)
+        REFERENCES Clients(ClientId)
+);
+
+CREATE TABLE CartItems
+(
+    CartItemId INT IDENTITY(1,1) PRIMARY KEY,
+    CartId INT NOT NULL,
+    ProductId INT NOT NULL,
+    Quantity INT NOT NULL DEFAULT(1),
+
+    CONSTRAINT FK_CartItems_Cart
+        FOREIGN KEY (CartId)
+        REFERENCES Cart(CartId),
+
+    CONSTRAINT FK_CartItems_Product
+        FOREIGN KEY (ProductId)
+        REFERENCES Products(ProductId)
+);
+
 CREATE TABLE OrderItems (
   OrderItemId INT            IDENTITY PRIMARY KEY,
   OrderId     INT            NOT NULL,

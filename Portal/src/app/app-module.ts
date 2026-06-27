@@ -13,7 +13,7 @@ import { RegisterComponent } from './components/register/register';
 import { ProductsComponent } from './components/products/products';
 import { OrdersComponent } from './components/orders/orders';
 import { OrderDetailsComponent } from './components/order-details/order-details';
-import { NewOrderComponent } from './components/new-order/new-order';
+import { AddToCartComponent } from './components/add-to-cart/add-to-cart';
 import { ProfileComponent } from './components/profile/profile';
 import { OAuthModule } from 'angular-oauth2-oidc';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
@@ -24,8 +24,15 @@ import { AuthInterceptor } from './core/auth.interceptor';
 import { AuthService } from './core/auth.service';
 import { ApiService } from './core/api.service';
 
-
+import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
+import { CartComponent } from './components/cart/cart';
+import { CartService } from './core/cart.service';
+import { LOCALE_ID } from '@angular/core';
+import { registerLocaleData } from '@angular/common';
+import localeZa from '@angular/common/locales/en-ZA';
+
+registerLocaleData(localeZa, 'en-ZA');
 
 @NgModule({
   declarations: [
@@ -38,10 +45,11 @@ import { FormsModule } from '@angular/forms';
     ProductsComponent,
     OrdersComponent,
     OrderDetailsComponent,
-    NewOrderComponent,
+    AddToCartComponent,
     ProfileComponent,
     WelcomeComponent,
-    ConfirmCancelDialogComponent
+    ConfirmCancelDialogComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,
@@ -50,12 +58,15 @@ import { FormsModule } from '@angular/forms';
     AppRoutingModule,
     CoreModule,
     SharedModule,
-    OAuthModule.forRoot()
+    OAuthModule.forRoot(),
+    IonicModule
   ],
   providers: [
     provideBrowserGlobalErrorListeners(),
     provideZonelessChangeDetection(),
     provideClientHydration(withEventReplay()),
+    { provide: LOCALE_ID, useValue: 'en-ZA' },
+    CartService,
     AuthService,
     ApiService,
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
