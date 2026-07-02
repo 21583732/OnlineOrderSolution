@@ -7,12 +7,56 @@
       "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\models\\clientportalcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\the it guy\\onlineordersolution\\clientportal.api\\clientportal.api\\services\\orderstatusbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\services\\orderstatusbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\the it guy\\onlineordersolution\\clientportal.api\\clientportal.api\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\models\\order.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\the it guy\\onlineordersolution\\clientportal.api\\clientportal.api\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\dtos\\orderdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\the it guy\\onlineordersolution\\clientportal.api\\clientportal.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\controllers\\orderscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\the it guy\\onlineordersolution\\clientportal.api\\clientportal.api\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\controllers\\cartcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\the it guy\\onlineordersolution\\clientportal.api\\clientportal.api\\migrations\\20260702165426_addshippingaddresstoorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\migrations\\20260702165426_addshippingaddresstoorders.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\the it guy\\onlineordersolution\\clientportal.api\\clientportal.api\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\controllers\\clientscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\the it guy\\onlineordersolution\\clientportal.api\\clientportal.api\\dtos\\updateprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\dtos\\updateprofiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\the it guy\\onlineordersolution\\clientportal.api\\clientportal.api\\dtos\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\dtos\\cartdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\the it guy\\onlineordersolution\\clientportal.api\\clientportal.api\\dtos\\addressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\dtos\\addressdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\the it guy\\onlineordersolution\\clientportal.api\\clientportal.api\\dtos\\registerclientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\dtos\\registerclientdto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\the it guy\\onlineordersolution\\clientportal.api\\clientportal.api\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\models\\client.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\the it guy\\onlineordersolution\\clientportal.api\\clientportal.api\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\models\\address.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\the it guy\\onlineordersolution\\clientportal.api\\clientportal.api\\services\\orderstatusbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|solutionrelative:clientportal.api\\services\\orderstatusbackgroundservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{C29F960D-F5AE-49A4-84A7-1AAFBFFAD54A}|ClientPortal.Api\\ClientPortal.Api.csproj|c:\\users\\vutom\\documents\\the it guy\\onlineordersolution\\clientportal.api\\clientportal.api\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -26,8 +70,22 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Order.cs",
+              "DocumentMoniker": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Models\\Order.cs",
+              "RelativeDocumentMoniker": "ClientPortal.Api\\Models\\Order.cs",
+              "ToolTip": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Models\\Order.cs",
+              "RelativeToolTip": "ClientPortal.Api\\Models\\Order.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T16:02:15.738Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -36,14 +94,157 @@
               "RelativeDocumentMoniker": "ClientPortal.Api\\Models\\ClientPortalContext.cs",
               "ToolTip": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Models\\ClientPortalContext.cs",
               "RelativeToolTip": "ClientPortal.Api\\Models\\ClientPortalContext.cs",
-              "ViewState": "AgIAAAMAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-06-26T10:40:57.255Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
+              "Title": "OrdersController.cs",
+              "DocumentMoniker": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Controllers\\OrdersController.cs",
+              "RelativeDocumentMoniker": "ClientPortal.Api\\Controllers\\OrdersController.cs",
+              "ToolTip": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Controllers\\OrdersController.cs",
+              "RelativeToolTip": "ClientPortal.Api\\Controllers\\OrdersController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAATAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T17:00:48.496Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "OrderDto.cs",
+              "DocumentMoniker": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\DTOs\\OrderDto.cs",
+              "RelativeDocumentMoniker": "ClientPortal.Api\\DTOs\\OrderDto.cs",
+              "ToolTip": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\DTOs\\OrderDto.cs",
+              "RelativeToolTip": "ClientPortal.Api\\DTOs\\OrderDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T17:00:16.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "CartController.cs",
+              "DocumentMoniker": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Controllers\\CartController.cs",
+              "RelativeDocumentMoniker": "ClientPortal.Api\\Controllers\\CartController.cs",
+              "ToolTip": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Controllers\\CartController.cs",
+              "RelativeToolTip": "ClientPortal.Api\\Controllers\\CartController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAfAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-06-26T11:01:06.766Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "20260702165426_AddShippingAddressToOrders.cs",
+              "DocumentMoniker": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Migrations\\20260702165426_AddShippingAddressToOrders.cs",
+              "RelativeDocumentMoniker": "ClientPortal.Api\\Migrations\\20260702165426_AddShippingAddressToOrders.cs",
+              "ToolTip": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Migrations\\20260702165426_AddShippingAddressToOrders.cs",
+              "RelativeToolTip": "ClientPortal.Api\\Migrations\\20260702165426_AddShippingAddressToOrders.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAAAAwAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T16:54:26.368Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ClientsController.cs",
+              "DocumentMoniker": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Controllers\\ClientsController.cs",
+              "RelativeDocumentMoniker": "ClientPortal.Api\\Controllers\\ClientsController.cs",
+              "ToolTip": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Controllers\\ClientsController.cs",
+              "RelativeToolTip": "ClientPortal.Api\\Controllers\\ClientsController.cs",
+              "ViewState": "AgIAAKAAAAAAAAAAAAAuwKkAAAAoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T12:20:51.641Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UpdateProfileDto.cs",
+              "DocumentMoniker": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\DTOs\\UpdateProfileDto.cs",
+              "RelativeDocumentMoniker": "ClientPortal.Api\\DTOs\\UpdateProfileDto.cs",
+              "ToolTip": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\DTOs\\UpdateProfileDto.cs",
+              "RelativeToolTip": "ClientPortal.Api\\DTOs\\UpdateProfileDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T12:19:48.272Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "AddressDto.cs",
+              "DocumentMoniker": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\DTOs\\AddressDto.cs",
+              "RelativeDocumentMoniker": "ClientPortal.Api\\DTOs\\AddressDto.cs",
+              "ToolTip": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\DTOs\\AddressDto.cs",
+              "RelativeToolTip": "ClientPortal.Api\\DTOs\\AddressDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T14:07:54.435Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CartDto.cs",
+              "DocumentMoniker": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\DTOs\\CartDto.cs",
+              "RelativeDocumentMoniker": "ClientPortal.Api\\DTOs\\CartDto.cs",
+              "ToolTip": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\DTOs\\CartDto.cs",
+              "RelativeToolTip": "ClientPortal.Api\\DTOs\\CartDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAArAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T13:40:30.507Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "RegisterClientDto.cs",
+              "DocumentMoniker": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\DTOs\\RegisterClientDto.cs",
+              "RelativeDocumentMoniker": "ClientPortal.Api\\DTOs\\RegisterClientDto.cs",
+              "ToolTip": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\DTOs\\RegisterClientDto.cs",
+              "RelativeToolTip": "ClientPortal.Api\\DTOs\\RegisterClientDto.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T12:18:52.839Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "Address.cs",
+              "DocumentMoniker": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Models\\Address.cs",
+              "RelativeDocumentMoniker": "ClientPortal.Api\\Models\\Address.cs",
+              "ToolTip": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Models\\Address.cs",
+              "RelativeToolTip": "ClientPortal.Api\\Models\\Address.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAuAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T12:06:17.286Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Client.cs",
+              "DocumentMoniker": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Models\\Client.cs",
+              "RelativeDocumentMoniker": "ClientPortal.Api\\Models\\Client.cs",
+              "ToolTip": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Models\\Client.cs",
+              "RelativeToolTip": "ClientPortal.Api\\Models\\Client.cs",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAYwBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-02T12:07:41.949Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "OrderStatusBackgroundService.cs",
               "DocumentMoniker": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Services\\OrderStatusBackgroundService.cs",
               "RelativeDocumentMoniker": "ClientPortal.Api\\Services\\OrderStatusBackgroundService.cs",
@@ -51,25 +252,11 @@
               "RelativeToolTip": "ClientPortal.Api\\Services\\OrderStatusBackgroundService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAABwAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-22T10:42:55.048Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-06-22T10:42:55.048Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "CartController.cs",
-              "DocumentMoniker": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Controllers\\CartController.cs",
-              "RelativeDocumentMoniker": "ClientPortal.Api\\Controllers\\CartController.cs",
-              "ToolTip": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\Controllers\\CartController.cs",
-              "RelativeToolTip": "ClientPortal.Api\\Controllers\\CartController.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABEAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-06-26T11:01:06.766Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 14,
               "Title": "appsettings.json",
               "DocumentMoniker": "C:\\Users\\vutom\\Documents\\The IT Guy\\OnlineOrderSolution\\ClientPortal.Api\\ClientPortal.Api\\appsettings.json",
               "RelativeDocumentMoniker": "ClientPortal.Api\\appsettings.json",

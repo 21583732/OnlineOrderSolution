@@ -4,6 +4,7 @@
     {
         public string Username { get; set; }
         public string Password { get; set; } // plain password from the UI
+        public string ConfirmPassword { get; set; }
         public string Email { get; set; }
     }
 }

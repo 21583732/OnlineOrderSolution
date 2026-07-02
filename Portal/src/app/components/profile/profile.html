@@ -1,26 +1,109 @@
 <app-navbar-private></app-navbar-private>
 
 <div class="page-wrapper">
-  <mat-card class="profile-card">
-    <ng-container *ngIf="loading">
-      <div class="center-note">Loading profile...</div>
-    </ng-container>
 
-    <ng-container *ngIf="!loading && error">
-      <div class="error">{{ error }}</div>
-    </ng-container>
+  <div class="profile-card">
 
-    <ng-container *ngIf="!loading && client">
-      <div class="profile-top">
-        <mat-icon class="profile-icon" aria-hidden="false" aria-label="Profile">account_circle</mat-icon>
-        <div class="profile-name">{{ client.username || client.name || 'Unknown' }}</div>
-        <div class="profile-email">{{ client.email }}</div>
+    <div class="profile-header">
+      <h2>Complete Your Profile</h2>
+
+      <p class="subtitle">
+        Your information is used for shipping and order processing.
+        Please ensure your details are accurate.
+      </p>
+    </div>
+
+    <div *ngIf="loading" class="loading">
+      Loading profile...
+    </div>
+
+    <div *ngIf="!loading">
+
+      <div class="section">
+
+        <h3>Personal Information</h3>
+
+        <div class="form-grid two-columns">
+
+          <mat-form-field appearance="outline">
+            <mat-label>First Name</mat-label>
+            <input
+              matInput
+              [(ngModel)]="client.firstName">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Last Name</mat-label>
+            <input
+              matInput
+              [(ngModel)]="client.lastName">
+          </mat-form-field>
+
+        </div>
+
+      </div>
+
+      <div class="section">
+
+        <h3>Shipping Address</h3>
+
+        <div class="form-grid">
+
+          <mat-form-field appearance="outline" class="full-width">
+            <mat-label>Street Address</mat-label>
+            <input
+              matInput
+              [(ngModel)]="client.address.streetAddress">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>City</mat-label>
+            <input
+              matInput
+              [(ngModel)]="client.address.city">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Province</mat-label>
+            <input
+              matInput
+              [(ngModel)]="client.address.province">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Postal Code</mat-label>
+            <input
+              matInput
+              [(ngModel)]="client.address.postalCode">
+          </mat-form-field>
+
+          <mat-form-field appearance="outline">
+            <mat-label>Country</mat-label>
+            <input
+              matInput
+              [(ngModel)]="client.address.country">
+          </mat-form-field>
+
+        </div>
+
       </div>
 
       <div class="actions">
-        <!--<button mat-stroked-button (click)="logout()">Logout</button>-->
-        <button mat-flat-button color="primary" routerLink="/orders">My Orders</button>
+
+        <button
+          mat-raised-button
+          color="primary"
+          (click)="saveProfile()"
+          [disabled]="saving">
+
+          {{ saving ? 'Saving...' : 'Save Profile' }}
+
+        </button>
+
       </div>
-    </ng-container>
-  </mat-card>
+
+    </div>
+
+  </div>
+
 </div>

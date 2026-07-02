@@ -12,6 +12,11 @@ CREATE TABLE Clients (
   CreatedAt    DATETIME2      DEFAULT GETDATE()
 );
 
+ALTER TABLE Clients
+ADD
+    FirstName NVARCHAR(100) NULL,
+    LastName NVARCHAR(100) NULL;
+
 CREATE TABLE Products (
   ProductId   INT            IDENTITY PRIMARY KEY,
   Name        NVARCHAR(200)  NOT NULL,
@@ -24,6 +29,13 @@ CREATE TABLE Orders (
   OrderId   INT            IDENTITY PRIMARY KEY,
   ClientId  INT            NOT NULL,
   OrderDate DATETIME2      DEFAULT GETDATE(),
+  ShippingFirstName NVARCHAR(100) NULL,
+  ShippingLastName NVARCHAR(100) NULL,
+  ShippingStreetAddress NVARCHAR(255) NULL,
+  ShippingCity NVARCHAR(100) NULL,
+  ShippingProvince NVARCHAR(100) NULL,
+  ShippingPostalCode NVARCHAR(20) NULL,
+  ShippingCountry NVARCHAR(100) NULL,
   Status    NVARCHAR(50)   NOT NULL DEFAULT 'New',
   FOREIGN KEY(ClientId) REFERENCES Clients(ClientId)
 );
@@ -65,6 +77,30 @@ CREATE TABLE OrderItems (
   FOREIGN KEY(ProductId) REFERENCES Products(ProductId)
 );
 
+CREATE TABLE Address
+(
+    AddressId INT IDENTITY(1,1) PRIMARY KEY,
+
+    ClientId INT NOT NULL,
+
+    StreetAddress NVARCHAR(255) NOT NULL,
+
+    City NVARCHAR(100) NOT NULL,
+
+    Province NVARCHAR(100) NOT NULL,
+
+    PostalCode NVARCHAR(20) NOT NULL,
+
+    Country NVARCHAR(100) NOT NULL,
+
+    CONSTRAINT FK_Address_Client
+        FOREIGN KEY (ClientId)
+        REFERENCES Clients(ClientId)
+);
+
+ALTER TABLE Address
+ADD CONSTRAINT UQ_Address_Client UNIQUE (ClientId);
+
 
 INSERT INTO Products (Name, Description, Price, InStock)
 VALUES
@@ -104,3 +140,5 @@ VALUES
 ('Photo Printer', 'Compact printer for high-quality photo prints.', 2199.99, 1),
 ('Laptop Air 13"', 'Lightweight laptop with long battery life.', 5499.99, 1),
 ('Mechanical Keyboard', 'RGB backlit mechanical keyboard with blue switches.', 999.99, 1);
+
+

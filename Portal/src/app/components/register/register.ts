@@ -11,26 +11,44 @@ import { Router } from '@angular/router';
 export class RegisterComponent {
   username = '';
   password = '';
+  confirmPassword = '';
   email = '';
   message = ''; // For now, just plain password. In production, hash it.
 
   constructor(private apiService: ApiService, private router:Router) {}
 
   register() {
-    this.apiService.registerClient({
-      username: this.username,
-      password: this.password,
-      email: this.email
-    }).subscribe({
-      next: (res: any) => {
-        this.message = 'Registration successful! Redirecting to login...';
-        setTimeout(() =>{
-          this.router.navigate(['/login']);
-        }, 3000);
-      },
-      error: (err) => {
-        this.message = 'Registration failed: ' + (err.error || 'Unknown error');
-      }
-    });
+
+  if (this.password !== this.confirmPassword) {
+    this.message = 'Passwords do not match.';
+    return;
   }
+
+  this.apiService.registerClient({
+    username: this.username,
+    email: this.email,
+    password: this.password
+  }).subscribe({
+
+    next: () => {
+
+      this.message = 'Registration successful! Redirecting to login...';
+
+      setTimeout(() => {
+        this.router.navigate(['/login']);
+      },3000);
+
+    },
+
+    error: (err) => {
+
+      this.message =
+        'Registration failed: ' +
+        (err.error || 'Unknown error');
+
+    }
+
+  });
+
+}
 }

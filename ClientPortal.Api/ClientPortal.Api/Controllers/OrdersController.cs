@@ -51,6 +51,13 @@ namespace ClientPortal.Api.Controllers
                 ClientId = o.ClientId,
                 OrderDate = o.OrderDate,
                 Status = o.Status,
+                ShippingFirstName = o.ShippingFirstName,
+                ShippingLastName = o.ShippingLastName,
+                ShippingStreetAddress = o.ShippingStreetAddress,
+                ShippingCity = o.ShippingCity,
+                ShippingProvince = o.ShippingProvince,
+                ShippingPostalCode = o.ShippingPostalCode,
+                ShippingCountry = o.ShippingCountry,
                 OrderItems = o.OrderItems.Select(oi => new OrderItemDto
                 {
                     OrderItemId = oi.OrderItemId,
@@ -88,6 +95,13 @@ namespace ClientPortal.Api.Controllers
                 ClientId = o.ClientId,
                 OrderDate = o.OrderDate,
                 Status = o.Status,
+                ShippingFirstName = o.ShippingFirstName,
+                ShippingLastName = o.ShippingLastName,
+                ShippingStreetAddress = o.ShippingStreetAddress,
+                ShippingCity = o.ShippingCity,
+                ShippingProvince = o.ShippingProvince,
+                ShippingPostalCode = o.ShippingPostalCode,
+                ShippingCountry = o.ShippingCountry,
                 OrderItems = o.OrderItems.Select(oi => new OrderItemDto
                 {
                     OrderItemId = oi.OrderItemId,

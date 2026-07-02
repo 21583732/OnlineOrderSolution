@@ -19,9 +19,17 @@ export class LoginComponent {
   onLogin() {
     this.apiService.login(this.username, this.password).subscribe({
       next: (res: any) => {
-        this.auth.setToken(res.token);
-        this.router.navigate(['/products']); // redirect after storing token
-      },
+
+  this.auth.setToken(res.token);
+
+  if (res.profileComplete) {
+    this.router.navigate(['/products']);
+  }
+  else {
+    this.router.navigate(['/profile']);
+  }
+
+},
       error: (err) => {
         this.errorMessage = err.error?.message || 'Login failed';
       }

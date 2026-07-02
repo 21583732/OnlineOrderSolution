@@ -8,4 +8,5 @@ public class CartDto
     public int ClientId { get; set; }
     public List<CartItemDto> Items { get; set; } = new();
     public decimal Total { get; set; }
+    public AddressDto Address { get; set; }
 }

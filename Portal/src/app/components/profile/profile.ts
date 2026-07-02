@@ -12,7 +12,18 @@ import { Router } from '@angular/router';
 export class ProfileComponent implements OnInit {
   loading = true;
   error = '';
-  client: any = null;
+  client: any = {
+    firstName: '',
+    lastName: '',
+    address: {
+      streetAddress: '',
+      city: '',
+      province: '',
+      postalCode: '',
+      country: ''
+    }
+  };
+  saving = false;
 
   constructor(
     private api: ApiService,
@@ -33,6 +44,17 @@ export class ProfileComponent implements OnInit {
     this.api.getClientById(clientId).subscribe({
       next: (data) => {
         this.client = data;
+
+        if (!this.client.address) {
+          this.client.address = {
+            streetAddress: '',
+            city: '',
+            province: '',
+            postalCode: '',
+            country: ''
+          };
+        }
+
         this.loading = false;
         this.cdr.detectChanges();
       },
@@ -44,6 +66,46 @@ export class ProfileComponent implements OnInit {
       }
     });
   }
+
+  saveProfile() {
+
+  const clientId = this.auth.getUserIdFromToken();
+
+  if (!clientId)
+    return;
+
+  this.saving = true;
+
+  const payload = {
+    firstName: this.client.firstName,
+    lastName: this.client.lastName,
+    streetAddress: this.client.address.streetAddress,
+    city: this.client.address.city,
+    province: this.client.address.province,
+    postalCode: this.client.address.postalCode,
+    country: this.client.address.country
+  };
+
+  this.api.updateProfile(clientId, payload).subscribe({
+
+    next: () => {
+
+      this.saving = false;
+
+      this.router.navigate(['/products']);
+
+    },
+
+    error: () => {
+
+      this.saving = false;
+      this.error = 'Failed to save profile';
+
+    }
+
+  });
+
+}
 
   logout(): void {
     this.auth.logout();

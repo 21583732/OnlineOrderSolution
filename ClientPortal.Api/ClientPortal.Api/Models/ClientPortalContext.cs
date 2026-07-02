@@ -13,6 +13,8 @@ public partial class ClientPortalContext : DbContext
     {
     }
 
+    public virtual DbSet<Address> Addresses { get; set; }
+
     public virtual DbSet<Cart> Carts { get; set; }
 
     public virtual DbSet<CartItem> CartItems { get; set; }
@@ -27,6 +29,36 @@ public partial class ClientPortalContext : DbContext
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
+        modelBuilder.Entity<Address>(entity =>
+        {
+            entity.HasKey(e => e.AddressId).HasName("PK__Address__091C2AFB4F29E47E");
+
+            entity.ToTable("Address");
+
+            entity.HasIndex(e => e.ClientId, "UQ_Address_Client").IsUnique();
+
+            entity.Property(e => e.City)
+                .IsRequired()
+                .HasMaxLength(100);
+            entity.Property(e => e.Country)
+                .IsRequired()
+                .HasMaxLength(100);
+            entity.Property(e => e.PostalCode)
+                .IsRequired()
+                .HasMaxLength(20);
+            entity.Property(e => e.Province)
+                .IsRequired()
+                .HasMaxLength(100);
+            entity.Property(e => e.StreetAddress)
+                .IsRequired()
+                .HasMaxLength(255);
+
+            entity.HasOne(d => d.Client).WithOne(p => p.Address)
+                .HasForeignKey<Address>(d => d.ClientId)
+                .OnDelete(DeleteBehavior.ClientSetNull)
+                .HasConstraintName("FK_Address_Client");
+        });
+
         modelBuilder.Entity<Cart>(entity =>
         {
             entity.HasKey(e => e.CartId).HasName("PK__Cart__51BCD7B7E4045833");
@@ -66,6 +98,8 @@ public partial class ClientPortalContext : DbContext
             entity.Property(e => e.Email)
                 .IsRequired()
                 .HasMaxLength(200);
+            entity.Property(e => e.FirstName).HasMaxLength(100);
+            entity.Property(e => e.LastName).HasMaxLength(100);
             entity.Property(e => e.PasswordHash)
                 .IsRequired()
                 .HasMaxLength(256);
@@ -79,6 +113,13 @@ public partial class ClientPortalContext : DbContext
             entity.HasKey(e => e.OrderId).HasName("PK__Orders__C3905BCFB781CFEB");
 
             entity.Property(e => e.OrderDate).HasDefaultValueSql("(getdate())");
+            entity.Property(e => e.ShippingCity).HasMaxLength(100);
+            entity.Property(e => e.ShippingCountry).HasMaxLength(100);
+            entity.Property(e => e.ShippingFirstName).HasMaxLength(100);
+            entity.Property(e => e.ShippingLastName).HasMaxLength(100);
+            entity.Property(e => e.ShippingPostalCode).HasMaxLength(20);
+            entity.Property(e => e.ShippingProvince).HasMaxLength(100);
+            entity.Property(e => e.ShippingStreetAddress).HasMaxLength(255);
             entity.Property(e => e.Status)
                 .IsRequired()
                 .HasMaxLength(50)

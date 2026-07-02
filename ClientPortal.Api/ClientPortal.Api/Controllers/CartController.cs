@@ -108,6 +108,24 @@ namespace ClientPortal.Api.Controllers
         [HttpPost("checkout/{clientId}")]
         public async Task<IActionResult> Checkout(int clientId)
         {
+            // First check that the client exists
+            var client = await _context.Clients
+                .Include(c => c.Address)
+                .FirstOrDefaultAsync(c => c.ClientId == clientId);
+
+            if (client == null)
+                return NotFound();
+
+            // Prevent checkout until profile is completed
+            if (client.Address == null)
+            {
+                return BadRequest(new
+                {
+                    message = "Please complete your profile before placing an order."
+                });
+            }
+
+            // Load the cart exactly as before
             var cart = await _context.Carts
                 .Include(c => c.CartItems)
                     .ThenInclude(ci => ci.Product)
@@ -116,10 +134,22 @@ namespace ClientPortal.Api.Controllers
             if (cart == null || !cart.CartItems.Any())
                 return BadRequest("Cart is empty");
 
+            // Create the order
             var order = new Order
             {
                 ClientId = clientId,
+
                 Status = "New",
+
+                ShippingFirstName = client.FirstName,
+                ShippingLastName = client.LastName,
+
+                ShippingStreetAddress = client.Address.StreetAddress,
+                ShippingCity = client.Address.City,
+                ShippingProvince = client.Address.Province,
+                ShippingPostalCode = client.Address.PostalCode,
+                ShippingCountry = client.Address.Country,
+
                 OrderItems = cart.CartItems.Select(ci => new OrderItem
                 {
                     ProductId = ci.ProductId,
@@ -130,17 +160,24 @@ namespace ClientPortal.Api.Controllers
 
             _context.Orders.Add(order);
 
-            // clear cart
+            // Clear the cart
             _context.CartItems.RemoveRange(cart.CartItems);
 
             await _context.SaveChangesAsync();
 
-            return Ok(new { message = "Order created successfully" });
+            return Ok(new
+            {
+                message = "Order created successfully"
+            });
         }
 
         // helper
         private CartDto MapCart(Cart cart)
         {
+            var client = _context.Clients
+                .Include(c => c.Address)
+                .FirstOrDefault(c => c.ClientId == cart.ClientId);
+
             var items = cart.CartItems.Select(ci => new CartItemDto
             {
                 CartItemId = ci.CartItemId,
@@ -155,7 +192,18 @@ namespace ClientPortal.Api.Controllers
                 CartId = cart.CartId,
                 ClientId = cart.ClientId,
                 Items = items,
-                Total = items.Sum(i => i.UnitPrice * i.Quantity)
+                Total = items.Sum(i => i.UnitPrice * i.Quantity),
+
+                Address = client?.Address == null
+                    ? null
+                    : new AddressDto
+                    {
+                        StreetAddress = client.Address.StreetAddress,
+                        City = client.Address.City,
+                        Province = client.Address.Province,
+                        PostalCode = client.Address.PostalCode,
+                        Country = client.Address.Country
+                    }
             };
         }
 
