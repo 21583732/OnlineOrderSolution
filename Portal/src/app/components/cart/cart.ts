@@ -91,9 +91,14 @@ export class CartComponent implements OnInit {
 
         this.router.navigate(['/orders']);
       },
-      error: () => {
+      error: (err) => {
         this.checkingOut = false;
-        this.error = 'Checkout failed';
+        this.error = 
+            err.error?.message || 'Checkout failed';
+
+        if (err.error?.message?.includes('complete your profile')) {
+          this.router.navigate(['/profile']);
+        }
       }
     });
   }

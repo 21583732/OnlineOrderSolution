@@ -81,5 +81,7 @@ checkoutCart(clientId: number): Observable<any> {
   return this.http.post(`${this.baseUrl}/cart/checkout/${clientId}`, {});
 }
 
-
+updateProfile(clientId: number, data: any): Observable<any> {
+  return this.http.put(`${this.baseUrl}/Clients/${clientId}/profile`, data);
+}
 }

@@ -38,7 +38,9 @@ namespace ClientPortal.Api.Controllers
         [HttpGet("{id}")]
         public async Task<ActionResult<Client>> GetClient(int id)
         {
-            var client = await _context.Clients.FindAsync(id);
+            var client = await _context.Clients
+                .Include(c => c.Address)
+                .FirstOrDefaultAsync(c => c.ClientId == id);
 
             if (client == null)
             {
@@ -86,6 +88,16 @@ namespace ClientPortal.Api.Controllers
         {
             if (!ModelState.IsValid) return BadRequest(ModelState);
 
+            if (dto.Password != dto.ConfirmPassword)
+            {
+                return BadRequest("Passwords do not match.");
+            }
+
+            if (_context.Clients.Any(c => c.Email == dto.Email))
+            {
+                return BadRequest("Email already exists.");
+            }
+
             // Check if username already exists
             if (_context.Clients.Any(c => c.Username == dto.Username))
             {
@@ -116,6 +128,38 @@ namespace ClientPortal.Api.Controllers
             }
         }
 
+        [HttpPut("{id}/profile")]
+        public async Task<IActionResult> UpdateProfile(int id, UpdateProfileDto dto)
+        {
+            var client = await _context.Clients
+                .Include(c => c.Address)
+                .FirstOrDefaultAsync(c => c.ClientId == id);
+
+            if (client == null)
+                return NotFound();
+
+            client.FirstName = dto.FirstName;
+            client.LastName = dto.LastName;
+
+            if (client.Address == null)
+            {
+                client.Address = new Address
+                {
+                    ClientId = client.ClientId
+                };
+            }
+
+            client.Address.StreetAddress = dto.StreetAddress;
+            client.Address.City = dto.City;
+            client.Address.Province = dto.Province;
+            client.Address.PostalCode = dto.PostalCode;
+            client.Address.Country = dto.Country;
+
+            await _context.SaveChangesAsync();
+
+            return Ok(new { message = "Profile updated successfully." });
+        }
+
         [HttpPost("login")]
         public async Task<IActionResult> Login([FromBody] LoginClientDto dto)
         {
@@ -123,6 +167,7 @@ namespace ClientPortal.Api.Controllers
                 return BadRequest(ModelState);
 
             var client = await _context.Clients
+                .Include(c => c.Address)
                 .FirstOrDefaultAsync(c => c.Username == dto.Username);
 
             if (client == null || client.PasswordHash != HashPassword(dto.Password))
@@ -148,10 +193,17 @@ namespace ClientPortal.Api.Controllers
             var token = tokenHandler.CreateToken(tokenDescriptor);
             var tokenString = tokenHandler.WriteToken(token);
 
+
+            var profileComplete =
+                client.Address != null &&
+                !string.IsNullOrWhiteSpace(client.FirstName) &&
+                !string.IsNullOrWhiteSpace(client.LastName);
+
             return Ok(new
             {
                 token = tokenString,
-                username = client.Username
+                username = client.Username,
+                profileComplete = profileComplete
             });
         }
 

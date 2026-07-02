@@ -15,6 +15,17 @@
       </mat-form-field>
 
       <mat-form-field appearance="fill">
+    <mat-label>Confirm Password</mat-label>
+
+    <input
+        matInput
+        type="password"
+        name="confirmPassword"
+        [(ngModel)]="confirmPassword"
+        required />
+</mat-form-field>
+
+      <mat-form-field appearance="fill">
         <mat-label>Email</mat-label>
         <input matInput [(ngModel)]="email" name="email" type="email" required />
       </mat-form-field>
