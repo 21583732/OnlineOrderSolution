@@ -13,7 +13,17 @@ var builder = WebApplication.CreateBuilder(args);
 
 /// DB Context Configuration
 builder.Services.AddDbContext<ClientPortalContext>(options =>
-  options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+{
+    var conn = builder.Configuration.GetConnectionString("DefaultConnection");
+
+    // Fallback to Service Connector environment variable if DefaultConnection is empty
+    if (string.IsNullOrEmpty(conn))
+    {
+        conn = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
+    }
+
+    options.UseSqlServer(conn);
+});
 
 // Add services to the container.
 //builder.Services.AddControllers();
