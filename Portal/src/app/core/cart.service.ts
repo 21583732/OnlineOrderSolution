@@ -3,12 +3,13 @@ import { HttpClient } from '@angular/common/http';
 import { Observable, tap } from 'rxjs';
 import { AuthService } from './auth.service';
 import { AppStateService } from './app-state.service';
+import { environment } from '../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class CartService {
-  private baseUrl = 'http://localhost:5240/api';
+  private baseUrl = environment.apiUrl;
 
   constructor(
   private http: HttpClient,

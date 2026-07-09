@@ -13,7 +13,17 @@ var builder = WebApplication.CreateBuilder(args);
 
 /// DB Context Configuration
 builder.Services.AddDbContext<ClientPortalContext>(options =>
-  options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+{
+    var conn = builder.Configuration.GetConnectionString("DefaultConnection");
+
+    // Fallback to Service Connector environment variable if DefaultConnection is empty
+    if (string.IsNullOrEmpty(conn))
+    {
+        conn = Environment.GetEnvironmentVariable("AZURE_SQL_CONNECTIONSTRING");
+    }
+
+    options.UseSqlServer(conn);
+});
 
 // Add services to the container.
 //builder.Services.AddControllers();
@@ -66,8 +76,10 @@ builder.Services.AddSwaggerGen(c =>
 // Enable CORS for local development
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowLocalhost4200",
-        policy => policy.WithOrigins("http://localhost:4200")
+    options.AddPolicy("AllowFrontend",
+        policy => policy.WithOrigins(
+                        "http://localhost:4200",
+                        "https://mrwickmerch-hzepbxhgaea5hsc4.southafricanorth-01.azurewebsites.net")
                         .AllowAnyHeader()
                         .AllowAnyMethod()
                         .AllowCredentials());
@@ -128,7 +140,7 @@ if (app.Environment.IsDevelopment())
 
 ///app.UseHttpsRedirection();
 
-app.UseCors("AllowLocalhost4200"); // <-- enable CORS
+app.UseCors("AllowFrontend"); // <-- enable CORS
 app.UseAuthentication();
 
 app.UseAuthorization();
