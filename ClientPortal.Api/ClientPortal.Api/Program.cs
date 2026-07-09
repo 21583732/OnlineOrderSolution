@@ -76,8 +76,10 @@ builder.Services.AddSwaggerGen(c =>
 // Enable CORS for local development
 builder.Services.AddCors(options =>
 {
-    options.AddPolicy("AllowLocalhost4200",
-        policy => policy.WithOrigins("http://localhost:4200")
+    options.AddPolicy("AllowFrontend",
+        policy => policy.WithOrigins(
+                        "http://localhost:4200",
+                        "https://mrwickmerch-hzepbxhgaea5hsc4.southafricanorth-01.azurewebsites.net")
                         .AllowAnyHeader()
                         .AllowAnyMethod()
                         .AllowCredentials());
@@ -138,7 +140,7 @@ if (app.Environment.IsDevelopment())
 
 ///app.UseHttpsRedirection();
 
-app.UseCors("AllowLocalhost4200"); // <-- enable CORS
+app.UseCors("AllowFrontend"); // <-- enable CORS
 app.UseAuthentication();
 
 app.UseAuthorization();
