@@ -94,6 +94,10 @@ public partial class ClientPortalContext : DbContext
         {
             entity.HasKey(e => e.ClientId).HasName("PK__Clients__E67E1A245A5BCA1F");
 
+            entity.HasIndex(e => e.Email).IsUnique();
+
+            entity.HasIndex(e => e.Username).IsUnique();
+
             entity.Property(e => e.CreatedAt).HasDefaultValueSql("(getdate())");
             entity.Property(e => e.Email)
                 .IsRequired()

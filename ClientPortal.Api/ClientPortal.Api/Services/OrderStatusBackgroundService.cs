@@ -22,8 +22,8 @@ namespace ClientPortal.Api.Services
         private readonly IHubContext<OrderHub> _hub;
 
         // thresholds in seconds
-        private const int PendingSeconds = 59;
-        private const int ProcessedSeconds = 118; // Pending after 0-59, Processed after 59-118, Shipped after 118+
+        private const int PendingSeconds = 30;
+        private const int ProcessedSeconds = 60; // Pending after 0-30, Processed after 30-60, Shipped after 60+
 
         public OrderStatusBackgroundService(IServiceScopeFactory scopeFactory, IHubContext<OrderHub> hub)
         {
@@ -72,7 +72,7 @@ namespace ClientPortal.Api.Services
                 var age = (now - orderDate).TotalSeconds;
                 string newStatus = o.Status;
 
-                if (age < PendingSeconds)
+                if  (age < PendingSeconds)
                 {
                     newStatus = "New-Pending";
                 }

@@ -58,9 +58,10 @@ namespace ClientPortal.Api.Migrations
                         .HasMaxLength(255)
                         .HasColumnType("nvarchar(255)");
 
-                    b.HasKey("AddressId");
+                    b.HasKey("AddressId")
+                        .HasName("PK__Address__091C2AFB4F29E47E");
 
-                    b.HasIndex("ClientId")
+                    b.HasIndex(new[] { "ClientId" }, "UQ_Address_Client")
                         .IsUnique();
 
                     b.ToTable("Address", (string)null);
@@ -178,25 +179,32 @@ namespace ClientPortal.Api.Migrations
                         .HasDefaultValueSql("(getdate())");
 
                     b.Property<string>("ShippingCity")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("ShippingCountry")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("ShippingFirstName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("ShippingLastName")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("ShippingPostalCode")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(20)
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<string>("ShippingProvince")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(100)
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("ShippingStreetAddress")
-                        .HasColumnType("nvarchar(max)");
+                        .HasMaxLength(255)
+                        .HasColumnType("nvarchar(255)");
 
                     b.Property<string>("Status")
                         .IsRequired()
@@ -279,7 +287,6 @@ namespace ClientPortal.Api.Migrations
                     b.HasOne("ClientPortal.Api.Models.Client", "Client")
                         .WithOne("Address")
                         .HasForeignKey("ClientPortal.Api.Models.Address", "ClientId")
-                        .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired()
                         .HasConstraintName("FK_Address_Client");
 

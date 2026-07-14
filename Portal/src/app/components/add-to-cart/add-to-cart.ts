@@ -41,7 +41,7 @@ export class AddToCartComponent {
 
               setTimeout(() => {
                 this.dialogRef.close(true);
-              }, 700);
+              }, 3500);
             },
             error: (err) => {
               this.submitting = false;

@@ -1,0 +1,26 @@
+.password-rules{
+
+    margin-top:6px;
+    margin-bottom:18px;
+
+    font-size:.90rem;
+
+}
+
+.password-rules div{
+
+    color:#b5b5b5;
+
+    margin:4px 0;
+
+    transition:.2s;
+
+}
+
+.password-rules div.valid{
+
+    color:#5dd45d;
+
+    font-weight:600;
+
+}

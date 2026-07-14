@@ -5,10 +5,10 @@
     <h2>Your Cart</h2>
 
     <div *ngIf="loading" class="center-note">Loading cart...</div>
-    <div *ngIf="error" style="color:#ffb3b3;">{{ error }}</div>
+    <div *ngIf="error" style="color:#ff0000;">{{ error }}</div>
 
-    <div *ngIf="!loading && cart && cart.items.length === 0" class="center-note">
-      Your cart is empty. Browse our products to add items to your cart!
+    <div *ngIf="!loading && cart && cart.items.length === 0" class="center-note" style="color: #000000;">
+      Your cart 🛒 is empty. Browse our products to add items to your cart! 
     </div>
 
     <table *ngIf="cart && cart.items.length > 0" class="table-modern">

@@ -1,43 +1,117 @@
 <app-navbar-public></app-navbar-public>
 
 <div class="page-wrapper">
+
   <div class="card">
+
     <h2>Register</h2>
+
     <form (ngSubmit)="register()">
+
       <mat-form-field appearance="fill">
+
         <mat-label>Username</mat-label>
-        <input matInput [(ngModel)]="username" name="username" required />
+
+        <input
+          matInput
+          name="username"
+          [(ngModel)]="username"
+          required>
+
       </mat-form-field>
 
       <mat-form-field appearance="fill">
-        <mat-label>Password</mat-label>
-        <input matInput [(ngModel)]="password" name="password" type="password" required />
-      </mat-form-field>
 
-      <mat-form-field appearance="fill">
-    <mat-label>Confirm Password</mat-label>
-
-    <input
-        matInput
-        type="password"
-        name="confirmPassword"
-        [(ngModel)]="confirmPassword"
-        required />
-</mat-form-field>
-
-      <mat-form-field appearance="fill">
         <mat-label>Email</mat-label>
-        <input matInput [(ngModel)]="email" name="email" type="email" required />
+
+        <input
+          matInput
+          type="email"
+          name="email"
+          [(ngModel)]="email"
+          required>
+
+      </mat-form-field>
+
+      <mat-form-field appearance="fill">
+
+        <mat-label>Password</mat-label>
+
+        <input
+          matInput
+          type="password"
+          name="password"
+          [(ngModel)]="password"
+          (ngModelChange)="validatePassword()"
+          required>
+
+      </mat-form-field>
+
+      <div class="password-rules">
+
+        <div [class.valid]="passwordRequirements.length">
+          ✓ At least 8 characters
+        </div>
+
+        <div [class.valid]="passwordRequirements.upper">
+          ✓ One uppercase letter
+        </div>
+
+        <div [class.valid]="passwordRequirements.lower">
+          ✓ One lowercase letter
+        </div>
+
+        <div [class.valid]="passwordRequirements.number">
+          ✓ One number
+        </div>
+
+        <div [class.valid]="passwordRequirements.special">
+          ✓ One special character
+        </div>
+
+      </div>
+
+      <mat-form-field appearance="fill">
+
+        <mat-label>Confirm Password</mat-label>
+
+        <input
+          matInput
+          type="password"
+          name="confirmPassword"
+          [(ngModel)]="confirmPassword"
+          required>
+
       </mat-form-field>
 
       <div class="actions">
-        <button mat-raised-button color="primary" type="submit">Register</button>
+
+        <button
+          mat-raised-button
+          color="primary"
+          type="submit">
+
+          Register
+
+        </button>
+
       </div>
+
     </form>
 
-    <p class="muted" [ngStyle]="{ color: message.startsWith('Registration successful') ? '#d4ffd4' : '#ffd4d4' }">
-      {{ message }}
-    </p>
-  </div>
-</div>
+    <p
+      class="muted"
+      [ngStyle]="{
+        color:
+        message.startsWith('Registration successful')
+        ? '#7CFC7C'
+        : '#ff8080'
+      }">
 
+      {{ message }}
+
+    </p>
+
+  </div>
+
+</div>
