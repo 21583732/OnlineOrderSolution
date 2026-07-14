@@ -13,6 +13,7 @@ using System.Security.Claims;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using ClientPortal.Api.Helpers;
 
 namespace ClientPortal.Api.Controllers
 {
@@ -86,36 +87,62 @@ namespace ClientPortal.Api.Controllers
         [HttpPost("register")]
         public async Task<IActionResult> RegisterClient([FromBody] RegisterClientDto dto)
         {
-            if (!ModelState.IsValid) return BadRequest(ModelState);
+            if (!ModelState.IsValid)
+                return BadRequest(ModelState);
+
+            var normalizedEmail = dto.Email.Trim().ToLowerInvariant();
 
             if (dto.Password != dto.ConfirmPassword)
             {
                 return BadRequest("Passwords do not match.");
             }
 
-            if (_context.Clients.Any(c => c.Email == dto.Email))
+            if (!ValidationHelper.IsValidEmail(normalizedEmail))
+            {
+                return BadRequest("Please enter a valid email address.");
+            }
+
+            if (!ValidationHelper.IsStrongPassword(dto.Password))
+            {
+                return BadRequest(
+                    "Password must contain at least 8 characters, one uppercase letter, one lowercase letter, one number and one special character.");
+            }
+
+            if (await _context.Clients.AnyAsync(c =>
+                    c.Email.ToLower() == normalizedEmail))
             {
                 return BadRequest("Email already exists.");
             }
 
-            // Check if username already exists
-            if (_context.Clients.Any(c => c.Username == dto.Username))
+            if (await _context.Clients.AnyAsync(c =>
+                    c.Username.ToLower() == dto.Username.Trim().ToLower()))
             {
-                return BadRequest("Username already exists");
+                return BadRequest("Username already exists.");
             }
 
             var client = new Client
             {
-                Username = dto.Username,
+                Username = dto.Username.Trim(),
                 PasswordHash = HashPassword(dto.Password),
-                Email = dto.Email,
+                Email = normalizedEmail,
                 CreatedAt = DateTime.UtcNow
             };
 
             _context.Clients.Add(client);
-            await _context.SaveChangesAsync();
 
-            return Ok(new { message = "Registration successful" });
+            try
+            {
+                await _context.SaveChangesAsync();
+            }
+            catch (DbUpdateException)
+            {
+                return BadRequest("Username or email already exists.");
+            }
+
+            return Ok(new
+            {
+                message = "Registration successful"
+            });
         }
 
         private string HashPassword(string password)

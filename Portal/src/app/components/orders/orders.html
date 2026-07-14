@@ -4,7 +4,7 @@
     <h2>Your Orders</h2>
 
     <div *ngIf="loading" class="center-note">Loading orders...</div>
-    <div *ngIf="error" style="color:#ffd4d4;">{{ error }}</div>
+    <div *ngIf="error" style="color:#ff0000;">{{ error }}</div>
 
     <table *ngIf="!loading && orders.length > 0" class="table-modern">
       <thead>
@@ -35,6 +35,8 @@
       </tbody>
     </table>
 
-    <div *ngIf="!loading && orders.length === 0" class="center-note">You have no orders.... Yet😉. Browse our products to place an order!</div>
+    <div *ngIf="!loading && orders.length === 0" class="center-note" style="color: #000000;">
+      You have no orders.... Yet😉. Browse our products to place an order!
+    </div>
   </div>
 </div>

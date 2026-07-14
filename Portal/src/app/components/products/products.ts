@@ -58,7 +58,7 @@ openNewOrder(product: any) {
 
     this.appState.refreshCartCount();
 
-    this.router.navigate(['/cart']).then(() => {
+    this.router.navigate(['/products']).then(() => {
       this.cdr.detectChanges();
     });
   }
