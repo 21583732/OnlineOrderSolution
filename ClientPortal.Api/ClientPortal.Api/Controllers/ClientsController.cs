@@ -147,12 +147,42 @@ namespace ClientPortal.Api.Controllers
 
         private string HashPassword(string password)
         {
-            using (var sha256 = System.Security.Cryptography.SHA256.Create())
-            {
-                var bytes = System.Text.Encoding.UTF8.GetBytes(password);
-                var hash = sha256.ComputeHash(bytes);
-                return Convert.ToBase64String(hash);
-            }
+            // Generate a random 16-byte salt
+            byte[] salt = RandomNumberGenerator.GetBytes(16);
+
+            // PBKDF2
+            using var pbkdf2 = new Rfc2898DeriveBytes(
+                password,
+                salt,
+                100000,
+                HashAlgorithmName.SHA256);
+
+            byte[] hash = pbkdf2.GetBytes(32);
+
+            return $"{Convert.ToBase64String(salt)}:{Convert.ToBase64String(hash)}";
+        }
+
+        private bool VerifyPassword(string password, string storedPassword)
+        {
+            var parts = storedPassword.Split(':');
+
+            if (parts.Length != 2)
+                return false;
+
+            byte[] salt = Convert.FromBase64String(parts[0]);
+            byte[] storedHash = Convert.FromBase64String(parts[1]);
+
+            using var pbkdf2 = new Rfc2898DeriveBytes(
+                password,
+                salt,
+                100000,
+                HashAlgorithmName.SHA256);
+
+            byte[] computedHash = pbkdf2.GetBytes(32);
+
+            return CryptographicOperations.FixedTimeEquals(
+                storedHash,
+                computedHash);
         }
 
         [HttpPut("{id}/profile")]
@@ -197,8 +227,13 @@ namespace ClientPortal.Api.Controllers
                 .Include(c => c.Address)
                 .FirstOrDefaultAsync(c => c.Username == dto.Username);
 
-            if (client == null || client.PasswordHash != HashPassword(dto.Password))
-                return Unauthorized(new { message = "Invalid username or password" });
+            if (client == null || !VerifyPassword(dto.Password, client.PasswordHash))
+            {
+                return Unauthorized(new
+                {
+                    message = "Invalid username or password"
+                });
+            }
 
             // Create JWT token
             var tokenHandler = new JwtSecurityTokenHandler();
